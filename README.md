@@ -9,3 +9,5 @@ nShogi is a Shogi game written in TI-Lua in order to run on the TI-Nspire Handhe
 I fixed all the problems in the Python version and made a GUI.
 
 Have fun :)
+
+**PS: TI-Lua is DIFFERENT from Lua.**
