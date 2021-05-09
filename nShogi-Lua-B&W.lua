@@ -594,6 +594,21 @@ end
 function on.charIn(char)
  if char == "r" or char == "b" or char == "g" or char == "s" or char == "n" or char == "l" or char == "p" then
   dropChess(char)
+ elseif char == "8" or char == "4" or char == "2" or char == "6" then
+  if win ~= -1 then
+   on.returnKey()
+  end
+  if char == "8" and ((sel[2] > 1 and sel[5] == false) or (sel[4] > 1 and sel[5] == true)) then
+   selectMove(0,-1)
+  elseif char == "2" and ((sel[2] < 9 and sel[5] == false) or (sel[4] < 9 and sel[5] == true)) then
+   selectMove(0,1)
+  elseif char == "4" and ((sel[1] > 1 and sel[5] == false) or (sel[3] > 1 and sel[5] == true)) then
+   selectMove(-1,0)
+  elseif char == "6" and ((sel[1] < 9 and sel[5] == false) or (sel[3] < 9 and sel[5] == true)) then
+   selectMove(1,0)
+  end
+ elseif char == "5" then
+  on.enterKey()
  end
  platform.window:invalidate()
 end
